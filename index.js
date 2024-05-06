@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+ 
 let db = new sqlite3.Database("mydatabase.db", (err) => {
   if (err) {
     console.error("Error connecting to SQLite:", err.message);
