@@ -3,8 +3,10 @@ const sqlite3 = require("sqlite3").verbose();
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const addProxyMiddleware = require('./middleware/addProxyMiddleware');
 
 const app = express();
+addProxyMiddleware(app);
 app.use(cors());
 app.use(bodyParser.json());
  
